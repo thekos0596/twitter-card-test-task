@@ -1,3 +1,9 @@
+import Tweets from './Tweets/Tweets';
+
 export const App = () => {
-  return <>here will be my app raect</>;
+  return (
+    <>
+      <Tweets />
+    </>
+  );
 };
