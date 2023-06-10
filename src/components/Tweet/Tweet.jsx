@@ -1,18 +1,14 @@
-import React from 'react';
+import Button from 'components/Button/Button';
 
-const Tweet = ({ users }) => {
+const Tweet = ({ user }) => {
   return (
-    <>
-      {users.map(({ id, name, tweets, followers, avatar }) => (
-        <li key={id}>
-          <img src={avatar} alt="" />
-          <span>{name}</span>
-          <span>{tweets} Tweets</span>
-          <span>{followers} Followers</span>
-          <button>Follow</button>
-        </li>
-      ))}
-    </>
+    <li key={user.id}>
+      <img src={user.avatar} alt="" />
+      <span>{user.name}</span>
+      <span> Tweets {user.tweets}</span>
+      <span> Followers {user.followers}</span>
+      <Button user={user} />
+    </li>
   );
 };
 export default Tweet;
